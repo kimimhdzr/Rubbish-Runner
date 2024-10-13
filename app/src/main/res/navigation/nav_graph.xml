@@ -1,0 +1,144 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.trashrunner.Main.Home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/nav_to_viewscheduleFragment"
+            app:destination="@id/viewscheduleFragment" />
+        <action
+            android:id="@+id/nav_to_reportFragment"
+            app:destination="@id/reportFragment" />
+        <action
+            android:id="@+id/nav_to_rentFragment"
+            app:destination="@id/rentFragment" />
+        <action
+            android:id="@+id/nav_to_ongoingreportFragment"
+            app:destination="@id/ongoingreportFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_communityFragment"
+            app:destination="@id/communityFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+
+    </fragment>
+
+    <!-- Community Fragment -->
+    <fragment
+        android:id="@+id/communityFragment"
+        android:name="com.example.trashrunner.Main.Community.CommunityFragment"
+        android:label="CommunityFragment"
+        tools:layout="@layout/fragment_community">
+        <action
+            android:id="@+id/action_communityFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_communityFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/nav_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+
+    <!-- Profile Fragment -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.trashrunner.Main.Profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_communityFragment"
+            app:destination="@id/communityFragment" />
+        <action
+            android:id="@+id/navto_editProfile"
+            app:destination="@id/editprofileFragment" />
+        <action
+            android:id="@+id/navto_appinfo"
+            app:destination="@id/appinfoFragment" />
+
+        <action
+            android:id="@+id/nav_to_supportFragment"
+            app:destination="@id/supportFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editprofileFragment"
+        android:name="com.example.trashrunner.Main.Profile.Fragments.EditProfile"
+        android:label="EditProfileFragment"
+        tools:layout="@layout/fragment_edit_profile">
+        <action
+            android:id="@+id/navto_profileFragment"
+            app:destination="@id/profileFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/appinfoFragment"
+        android:name="com.example.trashrunner.Main.Profile.Fragments.AppInformation"
+        android:label="AppInformation"
+        tools:layout="@layout/fragment_app_information">
+        <action
+            android:id="@+id/navto_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <!-- Services Fragment -->
+    <fragment
+        android:id="@+id/ongoingreportFragment"
+        android:name="com.example.trashrunner.Main.Home.Fragments.ongoing_report"
+        android:label="Ongoing Report"
+        tools:layout="@layout/fragment_ongoing_report"/>
+    <fragment
+        android:id="@+id/rentFragment"
+        android:name="com.example.trashrunner.Main.Home.Fragments.rent_service"
+        android:label="Rent Bin"
+        tools:layout="@layout/fragment_rent_service">
+        <action
+            android:id="@+id/navto_communityFragment"
+            app:destination="@id/communityFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.example.trashrunner.Main.Home.Fragments.report"
+        android:label="Report"
+        tools:layout="@layout/fragment_report"/>
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.example.trashrunner.Main.Profile.Fragments.Support"
+        android:label="Support"
+        tools:layout="@layout/fragment_support">
+        <action
+            android:id="@+id/navto_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewscheduleFragment"
+        android:name="com.example.trashrunner.Main.Home.Fragments.viewschedule"
+        android:label="View Schedule"
+        tools:layout="@layout/fragment_viewschedule"/>
+
+    <!-- MessageModel Fragment -->
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.trashrunner.Main.Community.Fragments.Chat"
+        android:label="Personal Chat"
+        tools:layout="@layout/fragment_chat">
+        <action
+            android:id="@+id/chatFragment_to_communityFragment"
+            app:destination="@id/communityFragment" />
+    </fragment>
+
+
+</navigation>

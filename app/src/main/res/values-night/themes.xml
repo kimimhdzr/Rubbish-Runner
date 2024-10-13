@@ -1,0 +1,61 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme for dark mode. -->
+    <style name="Base.Theme.TrashRunner" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">#03DAC5</item> <!-- Teal primary color -->
+        <item name="colorPrimaryVariant">#018786
+        </item> <!-- A slightly different shade for variant -->
+        <item name="colorOnPrimary">#000000</item> <!-- Black text/icons on primary color -->
+
+        <item name="colorSecondary">#BB86FC</item> <!-- Lighter teal for secondary elements -->
+        <item name="colorSecondaryVariant">#3700B3</item>
+        <item name="colorOnSecondary">#FFFFFF
+        </item> <!-- White for text/icons on secondary color -->
+
+
+        <item name="colorTertiary">#B3018786</item>
+        <item name="colorOnTertiary">#B3018786</item>
+
+        <item name="colorSurface">#1F1B24</item> <!-- Dark surface color -->
+        <item name="colorOnSurface">#FFFFFF</item> <!-- White text/icons on dark surface -->
+
+        <item name="android:colorBackground">#121212</item> <!--black background -->
+        <item name="backgroundColor">#201D25</item>
+        <item name="colorOnBackground">#FFFFFF</item> <!-- White text/icons on black background -->
+
+        <item name="colorError">#CF6679</item> <!-- Error color for dark theme (red) -->
+        <item name="colorOnError">#000000</item> <!-- Black text/icons on error color -->
+
+        <item name="android:statusBarColor">#018786</item>
+        <item name="android:navigationBarColor">#201D25</item>
+
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="subtitleTextColor">#D3D3D3</item>
+        <!--bottom nav -->
+        <item name="bottomNavigationStyle">@style/BottomNavStyleDark</item>
+        <!--card-->
+        <item name="materialCardViewStyle">@style/MyMaterialCardViewDark</item>
+
+        <!-- Enable motion for fragment transitions -->
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <!--        <item name="android:sharedElementEnterTransition">@transition/shared_element_container_transform</item>-->
+        <!--        <item name="android:sharedElementExitTransition">@transition/shared_element_container_transform</item>-->
+    </style>
+
+    <style name="BottomNavStyleDark">
+        <item name="itemIconTint">@color/bottom_nav_item_selector_dark</item>
+        <item name="itemTextColor">@color/bottom_nav_item_selector_dark</item>
+    </style>
+
+    <style name="MyMaterialCardViewDark" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/cardBackgroundDark</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="strokeColor">@color/cardStrokeColorDark</item>
+        <item name="strokeWidth">2dp</item>
+    </style>
+    >
+
+    <style name="Theme.TrashRunner.Dark" parent="Base.Theme.TrashRunner" />
+</resources>

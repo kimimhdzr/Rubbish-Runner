@@ -1,0 +1,10 @@
+<!-- res/transition/container_transform.xml -->
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="sequentially">
+
+    <!-- Container transform for the card view to fragment transition -->
+    <changeBounds android:duration="300"/>
+    <changeImageTransform android:duration="300"/>
+    <changeTransform android:duration="300"/>
+
+</transitionSet>

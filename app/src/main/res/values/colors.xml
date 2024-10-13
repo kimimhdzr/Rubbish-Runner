@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common color -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Colors used for light mode -->
+    <color name="bottomNavBackgroundLight">#FFFFFF</color>
+    <color name="bottomNavItemActiveLight">#4FB478</color>
+    <color name="bottomNavItemInactiveLight">#808080</color>
+
+    <color name="cardBackgroundLight">#F5F5F5</color>
+    <color name="cardTextColorLight">#000000</color>
+    <color name="cardStrokeColorLight">#00B198</color>
+
+    <!-- Colors used for dark mode -->
+    <color name="bottomNavBackgroundDark">#121212</color>
+    <color name="bottomNavItemActiveDark">#00B198</color>
+    <color name="bottomNavItemInactiveDark">#808080</color>
+
+    <color name="cardBackgroundDark">#1F1B24 </color> <!-- Darker background for card -->
+    <color name="cardTextColorDark">#FFFFFF</color> <!-- Lighter text color -->
+    <color name="cardStrokeColorDark">#201D25</color>
+
+</resources>

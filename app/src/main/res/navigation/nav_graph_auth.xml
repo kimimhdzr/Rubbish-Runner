@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_auth"
+    app:startDestination="@id/signin">
+
+    <fragment
+        android:id="@+id/signin"
+        android:name="com.example.trashrunner.Auth.Fragments.Signin"
+        android:label="SignIn"
+        tools:layout="@layout/fragment_signin">
+        <action
+            android:id="@+id/nav_to_signup"
+            app:destination="@id/signup" />
+        <action
+            android:id="@+id/nav_to_forgotpassword"
+            app:destination="@id/forgotpassword" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/signup"
+        android:name="com.example.trashrunner.Auth.Fragments.Signup"
+        android:label="SignUp"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/nav_to_signin"
+            app:destination="@id/signin" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotpassword"
+        android:name="com.example.trashrunner.Auth.Fragments.Forgot_password"
+        android:label="ForgotPassword"
+        tools:layout="@layout/fragment_forgot_password">
+        <action
+            android:id="@+id/nav_to_signin"
+            app:destination="@id/signin" />
+    </fragment>
+
+
+</navigation>
