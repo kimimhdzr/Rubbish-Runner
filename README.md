@@ -5,6 +5,7 @@ Rubbish Runner is a waste management app designed to simplify the process of man
 ## Table of Contents
 - [Features](#features)
 - [Screenshots](#screenshots)
+- [Download](#download)
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -24,6 +25,14 @@ Rubbish Runner is a waste management app designed to simplify the process of man
 ## Screenshots
 
 *Include a few screenshots of the app in action here.*
+
+## Download
+
+To download the app, please fill out the following form:
+
+[Download Rubbish Runner Here](https://forms.gle/iPwCeK6S3HxvL4ca7)
+
+**Note:** After submitting the form, you will receive an email with the download link and updates regarding the app.
 
 ## Tech Stack
 
