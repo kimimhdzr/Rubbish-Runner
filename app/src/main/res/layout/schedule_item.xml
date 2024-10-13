@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/serviceMaterialCard"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="4dp"
+    app:cardCornerRadius="8dp"
+    android:backgroundTint="?attr/colorSurface"
+    app:strokeColor="@android:color/transparent"
+    app:cardElevation="4dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/card_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schedule 1"
+            android:textAppearance="?attr/textAppearanceBody1" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/card_description"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="Card description."-->
+        <!--            android:textAppearance="?attr/textAppearanceBody2" />-->
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

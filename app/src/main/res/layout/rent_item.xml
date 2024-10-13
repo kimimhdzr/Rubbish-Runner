@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemMaterialCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp"
+    android:backgroundTint="?attr/backgroundColor"
+    android:clickable="true"
+    android:focusable="true"
+    android:onClick="expand"
+    android:stateListAnimator="@animator/card_press_state_animator"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="2dp"
+    app:strokeColor="?attr/colorSurface">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/rent_profile_image"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:background="?attr/colorSurface"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/company_name_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Klang Waste"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/rent_profile_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/company_detail_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:maxLines="3"
+            android:text="Our establishment has been operating for almost 20 years. We at Klang Waste put our customers and community as our top priority."
+            android:textColor="?attr/subtitleTextColor"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rent_profile_image"
+            app:layout_constraintTop_toBottomOf="@+id/company_name_txt" />
+
+        <TextView
+            android:id="@+id/company_pricing_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="RM50 - 150"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/rent_profile_image"
+            app:layout_constraintTop_toBottomOf="@+id/company_detail_txt" />
+
+        <LinearLayout
+            android:id="@+id/serviceslayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/rent_profile_image"
+            app:layout_constraintTop_toBottomOf="@+id/company_pricing_txt">
+
+            <TextView
+                android:id="@+id/truck_provide_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/service_rent_container"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="Truck" />
+
+            <TextView
+                android:id="@+id/container_provide_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/service_rent_container"
+                android:backgroundTint="?attr/colorSecondaryVariant"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="Container" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/starlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/rent_profile_image"
+            app:layout_constraintTop_toBottomOf="@+id/serviceslayout">
+
+            <ImageView
+                android:id="@+id/star1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baseline_star_border_24"
+                android:backgroundTint="?attr/colorSecondaryVariant"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/star2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baseline_star_border_24"
+                android:backgroundTint="?attr/colorSecondaryVariant"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/star3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baseline_star_border_24"
+                android:backgroundTint="?attr/colorSecondaryVariant"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/star4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baseline_star_border_24"
+                android:backgroundTint="?attr/colorSecondaryVariant"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/star5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baseline_star_border_24"
+                android:backgroundTint="?attr/colorSecondaryVariant"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/baseline_arrow_drop_down_24"
+            android:backgroundTint="?attr/colorSecondaryVariant"
+            app:layout_constraintBottom_toBottomOf="@id/starlayout"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/expandablelayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/starlayout">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/contactcontainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:backgroundTint="?attr/backgroundColor"
+                android:elevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/contactheader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact Info"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Company Address"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/contactheader" />
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="company@example.com"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/address" />
+
+                    <TextView
+                        android:id="@+id/phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="987-654-3210"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/email" />
+
+                    <Button
+                        android:id="@+id/messagenowbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/service_rent_container"
+                        android:backgroundTint="?attr/colorPrimaryVariant"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingHorizontal="20dp"
+                        android:text="Message Now"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contactcontainer">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/containercontainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="?attr/backgroundColor"
+                    android:elevation="8dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/containerheader"
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:elevation="4dp"
+                            android:padding="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/rent_service_image_2"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/containersize"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Size "
+                            android:textColor="?attr/subtitleTextColor"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/containerheader" />
+
+                        <TextView
+                            android:id="@+id/containersizedb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Size"
+                            android:textAlignment="textEnd"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/containersize"
+                            app:layout_constraintTop_toTopOf="@id/containersize" />
+
+                        <TextView
+                            android:id="@+id/containercolor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Color "
+                            android:textColor="?attr/subtitleTextColor"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="@id/containersize"
+                            app:layout_constraintTop_toBottomOf="@id/containersizedb" />
+
+                        <TextView
+                            android:id="@+id/containercolordb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Color"
+                            android:textAlignment="textEnd"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/containercolor"
+                            app:layout_constraintTop_toTopOf="@id/containercolor" />
+
+                        <TextView
+                            android:id="@+id/containerprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Price "
+                            android:textColor="?attr/subtitleTextColor"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="@id/containersize"
+                            app:layout_constraintTop_toBottomOf="@id/containercolordb" />
+
+                        <TextView
+                            android:id="@+id/containerpricedb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Price"
+                            android:textAlignment="textEnd"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/containerprice"
+                            app:layout_constraintTop_toTopOf="@id/containerprice" />
+
+                        <TextView
+                            android:id="@+id/containerusage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Usage "
+                            android:textColor="?attr/subtitleTextColor"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="@id/containersize"
+                            app:layout_constraintTop_toBottomOf="@id/containerpricedb" />
+
+                        <TextView
+                            android:id="@+id/containerusagedb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Usage"
+                            android:textAlignment="textEnd"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/containerusage"
+                            app:layout_constraintTop_toTopOf="@id/containerusage" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="?attr/backgroundColor"
+                    android:elevation="8dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/truckheader"
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:elevation="4dp"
+                            android:padding="30dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/rent_service_image_1"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/trucksize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Size "
+                            android:textColor="?attr/subtitleTextColor"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/truckheader" />
+
+                        <TextView
+                            android:id="@+id/trucksizedb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Size"
+                            android:textAlignment="textEnd"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/trucksize"
+                            app:layout_constraintTop_toTopOf="@id/trucksize" />
+
+                        <TextView
+                            android:id="@+id/truckmodel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Model "
+                            android:textColor="?attr/subtitleTextColor"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/trucksizedb" />
+
+                        <TextView
+                            android:id="@+id/truckmodeldb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Model"
+                            android:textAlignment="textEnd"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/truckmodel"
+                            app:layout_constraintTop_toTopOf="@id/truckmodel" />
+
+                        <TextView
+                            android:id="@+id/truckprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Price "
+                            android:textColor="?attr/subtitleTextColor"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/truckmodeldb" />
+
+                        <TextView
+                            android:id="@+id/truckpricedb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Price"
+                            android:textAlignment="textEnd"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/truckprice"
+                            app:layout_constraintTop_toTopOf="@id/truckprice" />
+
+                        <TextView
+                            android:id="@+id/truckusage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Usage "
+                            android:textColor="?attr/subtitleTextColor"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/truckpricedb" />
+
+                        <TextView
+                            android:id="@+id/truckusagedb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="usage"
+                            android:textAlignment="textEnd"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/truckusage"
+                            app:layout_constraintTop_toTopOf="@id/truckusage" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

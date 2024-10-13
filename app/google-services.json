@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "963270916995",
+    "project_id": "trash-runner-c3059",
+    "storage_bucket": "trash-runner-c3059.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963270916995:android:229943ce33bf0f926694b6",
+        "android_client_info": {
+          "package_name": "com.example.trashrunner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwLPgfwEOicnCPpH2GqAHl0CnGAuZFs-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
